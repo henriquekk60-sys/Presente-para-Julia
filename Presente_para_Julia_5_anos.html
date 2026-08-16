@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#08090d">
+<title>Para Julia ❤️</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#07080c;color:#fff;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-3;background:radial-gradient(circle at 15% 15%,rgba(255,70,105,.13),transparent 28%),radial-gradient(circle at 85% 80%,rgba(80,90,255,.10),transparent 30%)}
+body::after{content:"";position:fixed;inset:0;z-index:-2;opacity:.18;background-image:radial-gradient(circle,rgba(255,255,255,.25) 1px,transparent 1px);background-size:45px 45px;pointer-events:none}
+section{min-height:100vh;padding:90px 18px;display:flex;align-items:center;justify-content:center}
+.container{width:min(900px,100%);text-align:center}
+.nav{position:fixed;top:0;left:0;width:100%;padding:18px 22px;display:flex;justify-content:space-between;align-items:center;z-index:100;background:linear-gradient(to bottom,rgba(7,8,12,.9),transparent)}
+.logo{font-weight:bold;letter-spacing:1px;color:#ff5b7d}.nav span{font-size:13px;color:#888}
+.hero-content{animation:heroIn 1.4s ease forwards}
+@keyframes heroIn{from{opacity:0;transform:translateY(35px)}to{opacity:1;transform:translateY(0)}}
+.kicker{color:#999;text-transform:uppercase;letter-spacing:4px;font-size:12px;margin-bottom:25px}
+h1{font-size:clamp(50px,14vw,105px);line-height:.9;font-weight:900;margin-bottom:30px}
+.pink{color:#ff5b7d;text-shadow:0 0 35px rgba(255,91,125,.25)}
+.hero-text{max-width:650px;margin:auto;color:#b9b9b9;font-size:18px;line-height:1.75}
+.main-button{display:inline-block;margin-top:35px;padding:16px 30px;border-radius:50px;background:#ff5b7d;color:white;text-decoration:none;font-weight:bold;box-shadow:0 0 35px rgba(255,91,125,.18);transition:.3s}
+.main-button:hover{transform:translateY(-4px);box-shadow:0 0 45px rgba(255,91,125,.35)}
+.scroll{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);color:#555;font-size:12px;letter-spacing:2px}
+.card{padding:42px;border-radius:30px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(14px);box-shadow:0 25px 80px rgba(0,0,0,.35)}
+.icon{font-size:40px;margin-bottom:20px}
+h2{font-size:clamp(32px,7vw,55px);margin-bottom:25px}
+.text{color:#c5c5c5;font-size:17px;line-height:1.85}
+.counter-title{color:#888;font-size:14px;text-transform:uppercase;letter-spacing:3px;margin-bottom:25px}
+.number{font-size:clamp(110px,27vw,210px);line-height:.8;font-weight:900;color:#ff5b7d;text-shadow:0 0 50px rgba(255,91,125,.25)}
+.counter-sub{margin-top:35px;color:#aaa;font-size:20px;line-height:1.6}
+.timeline{position:relative;margin-top:40px;text-align:left}.timeline::before{content:"";position:absolute;left:14px;top:0;bottom:0;width:2px;background:rgba(255,91,125,.3)}
+.timeline-item{position:relative;padding-left:50px;margin-bottom:35px}.timeline-dot{position:absolute;left:6px;top:5px;width:18px;height:18px;border-radius:50%;background:#ff5b7d;box-shadow:0 0 18px rgba(255,91,125,.5)}
+.timeline-item h3{margin-bottom:8px;font-size:20px}.timeline-item p{color:#999;line-height:1.6}
+.memory{margin-top:30px;padding:30px;border:1px dashed rgba(255,255,255,.18);border-radius:22px;background:rgba(0,0,0,.2);color:#aaa;line-height:1.8}
+.memory strong{display:block;color:white;font-size:21px;margin-bottom:12px}
+.quotes{display:grid;gap:14px;margin-top:30px}.quote{padding:20px;text-align:left;border-radius:16px;background:rgba(255,255,255,.035);border-left:3px solid #ff5b7d;color:#c5c5c5;line-height:1.6}
+.surprise-button{border:none;margin-top:30px;padding:16px 28px;border-radius:50px;background:#15161d;color:#fff;border:1px solid rgba(255,255,255,.12);font-size:15px;cursor:pointer;transition:.3s}
+.surprise-button:hover{background:#20212a;transform:scale(1.03)}
+.hidden-message{max-height:0;overflow:hidden;opacity:0;transition:1s ease}.hidden-message.show{max-height:500px;opacity:1;margin-top:25px}
+.final-card{padding:45px 30px}.final-text{font-size:clamp(25px,6vw,43px);line-height:1.5;font-weight:bold}.final-small{margin-top:30px;color:#777;line-height:1.6}
+.back{display:inline-block;margin-top:30px;color:#999;text-decoration:none;border-bottom:1px solid #444;padding-bottom:4px}
+.heart{position:fixed;bottom:-30px;color:#ff5b7d;opacity:.10;pointer-events:none;z-index:5;animation:float 10s linear infinite}
+@keyframes float{from{transform:translateY(0) rotate(0)}to{transform:translateY(-115vh) rotate(180deg)}}
+.reveal{opacity:0;transform:translateY(35px);transition:1s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:600px){section{padding:75px 14px}.card{padding:30px 20px;border-radius:24px}.hero-text{font-size:16px}.text{font-size:16px}.nav{padding:15px 17px}.scroll{bottom:20px}}
+</style>
+</head>
+<body id="top">
+<nav class="nav"><div class="logo">JULIA ♥</div><span>5 anos</span></nav>
+<div class="heart" style="left:7%;animation-delay:0s;">♥</div>
+<div class="heart" style="left:23%;animation-delay:3s;">♥</div>
+<div class="heart" style="left:48%;animation-delay:6s;">♥</div>
+<div class="heart" style="left:73%;animation-delay:2s;">♥</div>
+<div class="heart" style="left:91%;animation-delay:8s;">♥</div>
+
+<section class="hero">
+<div class="container hero-content">
+<div class="kicker">Uma coisa que eu queria te mostrar</div>
+<h1>Julia,<br><span class="pink">isso é para você.</span></h1>
+<p class="hero-text">Eu poderia simplesmente te dar alguma coisa de presente. Mas depois de cinco anos de amizade, achei que seria muito mais legal criar alguma coisa que tivesse um pouco da nossa história.</p>
+<a href="#cinco" class="main-button">Abrir presente ↓</a>
+</div>
+<div class="scroll">DESÇA</div>
+</section>
+
+<section id="cinco"><div class="container reveal"><div class="card">
+<div class="counter-title">Nossa história</div><div class="number">5</div>
+<div class="counter-sub">anos de amizade.<br>E isso é só o começo.</div>
+</div></div></section>
+
+<section><div class="container reveal"><div class="card">
+<div class="icon">⌛</div><h2>Cinco anos.</h2>
+<p class="text">Cinco anos é bastante tempo. É tempo suficiente para muita coisa mudar, mas também para algumas pessoas se tornarem parte da nossa história.</p>
+<div class="timeline">
+<div class="timeline-item"><div class="timeline-dot"></div><h3>O começo</h3><p>Em algum momento, cinco anos atrás, a nossa amizade começou. E eu provavelmente não imaginava o quanto ela duraria.</p></div>
+<div class="timeline-item"><div class="timeline-dot"></div><h3>As histórias</h3><p>Vieram as conversas, as risadas, as situações aleatórias e aquelas histórias que só nós conseguimos entender.</p></div>
+<div class="timeline-item"><div class="timeline-dot"></div><h3>Hoje</h3><p>Depois de tudo isso, você continua sendo uma pessoa extremamente importante na minha vida.</p></div>
+<div class="timeline-item"><div class="timeline-dot"></div><h3>Daqui pra frente</h3><p>Espero que ainda tenhamos muitos anos, muitas histórias e muitos momentos para adicionar nessa lista.</p></div>
+</div></div></div></section>
+
+<section><div class="container reveal"><div class="card">
+<div class="icon">📁</div><h2>E as fotos?</h2>
+<p class="text">Eu queria muito colocar aqui várias fotos nossas. Infelizmente, não consegui.</p>
+<div class="memory"><strong>Eu perdi as fotos do outro WhatsApp.</strong>Elas estavam no meu outro WhatsApp e, infelizmente, perdi o acesso a elas.<br><br>Por isso, esse site acabou ficando sem aquela clássica galeria de fotos.<br><br>Mas pensando bem... talvez isso até combine com a nossa história. Porque os cinco anos não estão guardados em uma pasta do celular.<br><br>Estão guardados nas lembranças.</div>
+</div></div></section>
+
+<section><div class="container reveal"><div class="card">
+<div class="icon">🤝</div><h2>Você importa.</h2>
+<p class="text">Julia, eu provavelmente não falo isso tanto quanto deveria.<br><br>Mas você é uma pessoa muito importante para mim.<br><br>Você esteve presente durante uma parte enorme da minha vida e acabou fazendo parte de vários momentos que eu vou lembrar por muito tempo.<br><br>Eu valorizo muito a nossa amizade e tudo que construímos nesses cinco anos.</p>
+</div></div></section>
+
+<section><div class="container reveal"><div class="card">
+<div class="icon">♥</div><h2>Uma coisa é certa.</h2>
+<p class="text">Eu não quero ficar sem a sua amizade.<br><br>A vida muda. A gente cresce. Conhece novas pessoas. Segue novos caminhos.<br><br>Mas eu espero que isso nunca faça a gente simplesmente deixar de fazer parte da vida um do outro.<br><br>Depois de cinco anos, você já faz parte demais da minha história para eu simplesmente imaginar tudo sem você.</p>
+</div></div></section>
+
+<section><div class="container reveal"><div class="card">
+<div class="icon">😂</div><h2>O que cinco anos significam?</h2>
+<div class="quotes">
+<div class="quote">Conversas que começaram com uma coisa e terminaram falando de absolutamente tudo.</div>
+<div class="quote">Risadas em momentos que provavelmente não deveriam ser engraçados.</div>
+<div class="quote">Discussões que poderiam ter sido evitadas.</div>
+<div class="quote">Momentos que talvez parecessem normais, mas que hoje fazem parte da nossa história.</div>
+<div class="quote">E principalmente, uma amizade que chegou até aqui.</div>
+</div></div></div></section>
+
+<section><div class="container reveal"><div class="card">
+<div class="icon">🔒</div><h2>Ainda tem uma coisa.</h2>
+<p class="text">Eu deixei uma mensagem escondida aqui.<br>Mas você precisa clicar.</p>
+<button class="surprise-button" onclick="surpresa()">Abrir mensagem</button>
+<div class="hidden-message" id="mensagem"><p class="text">Se um dia você esquecer o quanto é importante para mim, volta aqui.<br><br>E lembra que, mesmo sem as fotos, sem guardar todos os momentos no celular e sem conseguir colocar cinco anos inteiros em uma página...<br><br>eu ainda escolheria ter vivido tudo isso com você.<br><br><strong style="color:#fff;">Obrigado por fazer parte da minha vida, Julia.</strong></p></div>
+</div></div></section>
+
+<section><div class="container reveal"><div class="card final-card">
+<div class="icon">★</div>
+<div class="final-text">Julia,<br><br>obrigado por esses <span class="pink">5 anos.</span><br><br>Obrigado pelas conversas, pelas risadas, pelas histórias, pelos momentos bons e até pelos momentos difíceis.<br><br>Você é uma pessoa que eu não quero perder.<br><br><span class="pink">Eu gosto muito de você e valorizo demais a nossa amizade.</span></div>
+<p class="final-small">Que esses cinco anos sejam apenas o primeiro capítulo de muitos outros.</p>
+<a href="#top" class="back">↑ Voltar ao começo</a>
+</div></div></section>
+
+<footer>Feito especialmente para Julia.<br>5 anos de amizade. ❤️</footer>
+
+<script>
+const elementos=document.querySelectorAll(".reveal");
+const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add("visible")})},{threshold:.15});
+elementos.forEach(elemento=>observer.observe(elemento));
+function surpresa(){document.getElementById("mensagem").classList.toggle("show")}
+setTimeout(()=>{document.title="Julia, isso é para você ❤️"},1500);
+</script>
+</body>
+</html>
